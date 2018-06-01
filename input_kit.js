@@ -2,7 +2,8 @@
 
 'use strict';
 
-var dappAddress = "n1v8Rwz1yWf2ELuFHXh86ptriJ5tc8GYkwQ";
+var dappAddress = "n1gSjAjpXiiiGjwGErHuQdtnH4ngtbquELy";
+// var dappAddress = "n1skDiY9YgdM5o6fxyjMefd2vXX1kPCSY6j";
 var Inputkit = function() {
 
 }

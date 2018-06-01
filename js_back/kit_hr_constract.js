@@ -243,13 +243,15 @@ kitSys.prototype = {
         obj.from = Blockchain.transaction.from;
         //这里不做查询  如果存在直接覆盖
 		obj.id = obj.id.trim();
-		obj.kitKey = obj.kitKey.trim();
+		// obj.kitKey = obj.kitKey.trim();
 		obj.recordTime = obj.recordTime.trim();
         
         
         var like_cur = this.goodItem_list.get(obj.kitKey);
         if (like_cur) {
-            like_cur.number = like_cur.number + 1;
+            var like_num = like_cur.number;
+            like_cur.number = like_num + 1;
+            this.goodItem_list.put(like_cur.kitKey, like_cur);
         } else {
             var like = new GoodItem();
             like.id = obj.id;
