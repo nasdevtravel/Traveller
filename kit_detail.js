@@ -2,7 +2,7 @@
 
 //'use strict';
 
-var dappAddress = "n1xesviHXtmD6mWQ3eS764xqESrA5VUrcdu";
+var dappAddress = "n1v8Rwz1yWf2ELuFHXh86ptriJ5tc8GYkwQ";
 
 var commit_comment_info = {
     "content": "",
