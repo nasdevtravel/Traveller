@@ -11,6 +11,9 @@ var pre_value="";
 PictureSaveAndRead.prototype = {
     init: function() {
         var self = this;
+		$("#kit_image").on('click',function(){
+			$("#myfile").click();
+		});
         $("#myfile").on('change', function () {
 			var file_src = self.getFileUrl(this.id);
 			$("#myfile").attr("src",file_src);
