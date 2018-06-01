@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>寻找旅行家</title>
+	<meta name="keywords" content="寻找旅行家">
+	<meta name="description" content="寻找旅行家">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	
+	<!-- include main css -->
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href="font-awesome-4.5.0/css/font-awesome.min.css" rel='stylesheet' type='text/css' media="all" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="css/inputKit.css"/>
+	<link rel="stylesheet" type="text/css" href="css/layer.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery.css"/>
+	
+	<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/r29/html5.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	
+<div>
+	<!--header-->
+	<header class="header_zi">
+	   <div class="container">
+		   <div class="logo">
+	   	   		<a href="index.html"><img src="images/logo1.png" alt="" width="300px"/></a>
+		   </div>
+		   <a href="#mmenu" class="phone-nav"><i class="fa fa-list"></i></a>
+		  <div class="logo_right">
+		  	 <nav class="nav" style="margin-left:100px;">
+		   		<ul>    
+					<li><a href="index.html" class="active" id="now_html">最新锦囊</a></li>
+					<li><a href="court_travel.html">锦囊攻略</a></li>
+					<li><a href="feedback.html">上传锦囊</a></li>
+					<li><a href="use_helper.html">使用攻略</a></li>
+		   		</ul>
+		  	 </nav>
+		  	 <div class="search">
+		  	 	<span class="sea_x">
+		  	 		<input type="" name="" id="search_input" placeholder="请输入关键词">
+		  	 		<i class="fa fa-search" id="searchByKey"></i>		  	
+		  	 	</span>
+		  	 </div>
+		  </div>
+	   	
+	   </div>
+	</header>
+			
+	<!--banner  start-->
+	<section class="banner_zi">
+	    <div><img src="images/banner_yuan.png" alt=""></div>	   
+	</section>
+	<!--banner end-->
+	<div class="head_bar">
+		<span>位置：</span><a href="index.html">最新锦囊 </a> > <span class="active">上传锦囊</span>
+	</div>
+		<div class="feedback_con">
+			<div class="top_tit">
+				<span class="span1">上传锦囊</span><br />
+				<span class="con_span">留下你的锦囊妙计，与他人共享快乐时刻！</span>
+			</div>
+			<ul class="liu_ul">
+				
+				
+				<li class="clearfix">
+					<p class="p1">
+						<span><i>*</i>昵称</span><input type="text" id="kit_name"/>
+					</p>
+					<p>
+						<span><i>*</i>攻略题目</span><input type="text" id="kit_topic"/>
+					</p>
+				</li>
+				<li class="clearfix">
+					<p class="p1"><span><i>*</i>目的地</span><input type="text" id="kit_place"/></p>
+					<p>
+						<span><i>*</i>出行天数</span><input type="text" id="kit_days"/>
+					</p>
+				</li>
+				<li class="clearfix">
+					<p class="p1"><span><i>*</i>入住酒店</span><input type="text" id="kit_hotel"/></p>
+					<p>
+						<span><i>*</i>费用</span><input type="text" id="kit_fee"/>
+					</p>
+				</li>
+				<li class="clearfix">
+					<p class="p1"><span><i>*</i>上传图片</span>
+						<img id="kit_image" src="images/upimg.png" class="addImg" width="280" height="250"/>
+						<input type="file" id="myfile" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple="" class="file" style="height: 250px;width: 300px;margin-top:1120px;margin-left:90px;" >
+					</p>
+					
+				</li>
+				<li>
+					
+						<span class="span_nei"><i>*</i>攻略正文</span>
+						<textarea id="kit_text" name="" rows="7" cols="" value=""></textarea>
+						
+				</li>
+				
+				<li class="btn">
+					<a id="submit">提交</a>
+					&nbsp;
+					<a href="">重置</a>
+					
+					
+				</li>
+			</ul>
+				
+		</div>
+
+	
+ 
+    <!--footer  start-->
+    <footer class="footer">
+		<div class="footer_con">
+				<div class="con">
+					<div class="nei">
+						<div class="">
+							<ul class="di_nav clearfix" style="margin-left:200px;">
+								<li><a href="index.html" class="active">最新锦囊</a></li>
+								<li><a href="court_travel.html">锦囊攻略</a></li>
+								<li><a href="feedback.html">上传锦囊</a></li>
+								<li><a href="use_helper.html">使用攻略</a></li>
+							</ul>
+							
+						</div>
+						<div class="clear"></div>
+						<div class="lian">
+							关于我们： 追梦者-Traveler团队，由一群来自不同区域的区块链爱好者组合而成，希望能够把最美好的事物留在星云上，留给星云用户。<br>
+							联系电话：<a >15130288383; 	&nbsp;</a>     邮    箱：<a >1289418330@qq.com; 	&nbsp;</a>地    址：深圳市, 南山区, 科技园 <br />
+							
+							<!-- <a href="map.html">网站地图</a><br /> -->
+						</div>
+						<div class="clear"></div>
+						<br />
+						<div class="lian" >精品推荐	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;
+							<a href="https://martincodesun.github.io/JockerMonkey/index.html">猴子请来的“梗”	&nbsp;</a>
+							<a href="https://nasdevxiaojiujiu.github.io/MovieStore/movie.html">Movie Store</a><br />
+						</div>
+						
+					</div>
+				</div>
+				
+		</div>
+		<div class="copy">Copyright &copy; 2018.追梦者-Traveler. </div>
+	</footer>
+    <!--footer  end-->
+
+	<!--移动端  Mmenu-->
+	<nav id="mmenu">
+		
+		<ul >
+			
+			<li><a href="index.html">首页</a></li>
+			<li><a href="scenic_overview.html">锦囊攻略</a></li>
+			<li><a href="feedback.html"  class="active">上传锦囊</a></li>
+			 
+		</ul>
+	</nav>	</div>	
+
+<!--Include Js-->
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!--移动端导航-->
+<script src="js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+
+<!--slick-->
+<script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+
+<!--placeholder-->
+<script src="js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- js文件导入 -->
+
+<script src="js_back/GoldSunApi.js"></script>
+<script src="js_back/kit_hr.js"></script>
+<script src="js_back/contentscript_j.js"></script>
+<script src="input_kit.js"></script>
+<script src="index_test.js"></script>
+<script src="js/jquery.autocomplete.js" type="text/javascript"></script>
+<script src="js/data.js" type="text/javascript"></script>
+<script src="js/autocomplete.js" type="text/javascript"></script>
+<!-- <script src="js/layer.js" type="text/javascript"></script> -->
+<script src="js/index.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(function(){ 
+		$('body').on("click",'#searchByKey',function(){
+			var input=$("#search_input").val();
+			if(''==input){
+				return;
+			}else{
+				window.location.href="court_travel.html?key="+input;
+			}
+		});
+		$('input, textarea').placeholder();
+	});
+</script>
+
+<!--<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+<!-- <script src="js_back/GoldSunApi.js"></script> -->
+<!-- <script src="js_back/kit_hr.js"></script> -->
+<!-- <script src="js_back/contentscript_j.js"></script> -->
+<!-- <script src="input_kit.js"></script> -->
+<!-- <script src="index_test.js"></script> -->
+</body>
+</html>

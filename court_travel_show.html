@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>寻找旅行家</title>
+	<meta name="keywords" content="寻找旅行家">
+	<meta name="description" content="寻找旅行家">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	
+	<!-- include main css -->
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>	
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href="font-awesome-4.5.0/css/font-awesome.min.css" rel='stylesheet' type='text/css' media="all" />
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	<link  rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/sinaFaceAndEffec.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style_loading.css"/>
+
+</head>
+<body>
+	
+<div>
+	<!--header-->
+	<header class="header_zi">
+	   <div class="container">
+		   <div class="logo">
+	   	   		<a href="index.html"><img src="images/logo1.png" alt="" width="300px"/></a>
+		   </div>
+		   <a href="#mmenu" class="phone-nav"><i class="fa fa-list"></i></a>
+		  <div class="logo_right">
+		  	  <nav class="nav" style="margin-left:100px;">
+		   		<ul>    
+					<li><a href="index.html">最新锦囊</a></li>
+					<li><a href="court_travel.html" class="active">锦囊攻略</a></li>
+					 <li><a href="feedback.html">上传锦囊</a></li>
+					 <li><a href="use_helper.html">使用攻略</a></li>
+		   		</ul>
+		  	 </nav>
+		  	 <div class="search">
+		  	 	<span class="sea_x">
+		  	 		<input type="" name="" id="search_input" placeholder="请输入关键词">
+		  	 		<i class="fa fa-search" id="searchByKey"></i>		  	
+		  	 	</span>
+		  	 </div>
+		  </div>
+	   	
+	   </div>
+	</header>
+			
+	<!--banner  start-->
+	<section class="banner_zi">
+	    <div><img src="images/banner_yuan.png" alt=""></div>	   
+	</section>
+	<!--banner end-->
+	<div class="head_bar">
+		<span>位置：</span><a href="court_travel.html">锦囊攻略</a> > <span class="active">攻略详细</span>
+	</div>
+	
+	<div class="home_news">
+		<div class="news_con" id="content_kit_detail">
+			<div class="top_tit">
+				<span class="span1" id="kit_topic"></span><br />
+				<span class="span2">作者：</span><span class="span2" id="kit_name"></span>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span class="span2">时间：</span><span class="span2" id="kit_time"></span>
+				<div style="display:inline-block;float:right;margin-top:-50px;"><span class="heart " id="like1" rel="like"  ></span> <span class="likeCount" id="likeCount" >0</span></div>
+				<div style="display:inline-block;float:right;margin-top:-14px;"><a href="javascript:void(0);" id="dashang"><img src="images/ds.png" width="30px;" height="30px"></a></div>
+			</div>
+			<div>
+				<div style="float:left;width:49%;">
+					<ul>
+						<li>
+							<p>
+								<span>目的地：</span><span id="kit_place"></span>
+							</p>
+						</li>
+						<li>
+							<p >
+								<span>出行天数：</span><span id="kit_days"></span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>酒店：</span><span id="kit_hotel"></span>
+							</p>
+						</li>
+						<li>
+							<p >
+								<span>花费：</span><span id="kit_fee"></span>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="pic" style="float:left;width:49%;">
+						<img src="images/banner1.jpg" alt="" class="vcenter_1" id="kit_image"/>
+						<i></i>
+				</div>
+			</div>
+			<div class="row-fluid" style="width:100%;float: left;">
+				<ul>
+					<li class="clearfix">
+						<div >
+							<span style="font-size:20px;">攻略正文:</span>
+							<p id="kit_text"></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<div class='loader loader1 loading_1' id="loading_kit_detail">
+			<div>
+				<div>
+				<div>
+					<div>
+					<div>
+						<div></div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="travel_show">
+		
+		<div class="travel_con">
+			
+			<div class="xianguan">
+				精彩点评
+			</div>
+			<div id="content" style="width: 90%; height: auto;margin-left:10%px;margin-top:80px">
+				<div class="wrap">
+					<div class="comment">
+						<div class="head-face">
+							<img src="images/1.jpg" / >
+							<p>匿名游客</p>
+						</div>
+						<div class="content">
+							<div class="cont-box">
+								<textarea class="text" placeholder="请输入..." id="comment_content" ></textarea>
+							</div>
+							<div class="tools-box">
+								<div class="operator-box-btn"><span class="face-icon"  >☺</span></div>
+								<div class="submit-btn"><input type="button" id="sub_comment" value="提交评论" /></div>
+							</div>
+						</div>
+					</div>
+					<div id="info-show">
+						<ul id="comment_list"></ul>
+						
+					</div>
+					<div class='loader loader1 loading_1' id="loading_kit_comment">
+						<div>
+							<div>
+							<div>
+								<div>
+								<div>
+									<div></div>
+								</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page" id="pagination_page">
+				<div id="pagination" class="pagination"></div>
+			</div>
+		</div>	
+	</div>
+	
+ 
+    <!--footer  start-->
+    <footer class="footer">
+		<div class="footer_con">
+				<div class="con">
+					<div class="nei">
+						<div class="">
+							<ul class="di_nav clearfix" style="margin-left:200px;">
+								<li><a href="index.html" class="active">最新锦囊</a></li>
+								<li><a href="court_travel.html">锦囊攻略</a></li>
+								<li><a href="feedback.html">上传锦囊</a></li>
+								<li><a href="use_helper.html">使用攻略</a></li>
+							</ul>
+							
+						</div>
+						<div class="clear"></div>
+						<div class="lian">
+							关于我们： 追梦者-Traveler团队，由一群来自不同区域的区块链爱好者组合而成，希望能够把最美好的事物留在星云上，留给星云用户。<br>
+							联系电话：<a >15130288383; 	&nbsp;</a>     邮    箱：<a >1289418330@qq.com; 	&nbsp;</a>地    址：深圳市, 南山区, 科技园 <br />
+							
+							<!-- <a href="map.html">网站地图</a><br /> -->
+						</div>
+						<div class="clear"></div>
+						<br />
+						<div class="lian" >精品推荐	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;
+							<a href="https://martincodesun.github.io/JockerMonkey/index.html">猴子请来的“梗”	&nbsp;</a>
+							<a href="https://nasdevxiaojiujiu.github.io/MovieStore/movie.html">Movie Store</a><br />
+						</div>
+						
+					</div>
+				</div>
+				
+		</div>
+		<div class="copy">Copyright &copy; 2018.追梦者-Traveler. </div>
+	</footer>
+    <!--footer  end-->
+
+	</div>	
+
+<!--Include Js-->
+<script src="lib/jquery-3.3.1.min.js" type="text/javascript"></script>
+
+<!--移动端导航-->
+<script src="js/jquery.mmenu.all.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+
+<!--slick-->
+<script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/wow.js" type="text/javascript" charset="utf-8"></script>
+<!-- js引入 -->
+<script src="lib/pagination.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="lib/urlParm.js"></script>
+<script src="lib/require.js"></script>
+
+
+<script src="kit_detail.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/sinaFaceAndEffec.js"></script>
+
+<!--placeholder-->
+<script src="js/jquery.placeholder.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(function(){ 
+		$('body').on("click",'#searchByKey',function(){
+			var input=$("#search_input").val();
+			if(''==input){
+				return;
+			}else{
+				window.location.href="court_travel.html?key="+input;
+			}
+		});
+		$('input, textarea').placeholder();
+	});
+	
+	// 绑定表情
+	$('.face-icon').SinaEmotion($('.text'));
+	template.registerFunction("formatComment", function (x) {
+		return AnalyticEmotion(x);
+	});
+</script>
+<script id="comment_list_t" type="text/html">
+		<%if(list.length > 0 ){%>
+		<%for(var i = 0; i < list.length; i++) {%>
+			<li>
+				<div class="head-face">
+					<img src="images/1.jpg" / >
+				</div>
+				<div class="reply-cont">
+					<p class="username">匿名游客</p>
+					<p class="comment-body"><%:=formatComment(list[i].content)%></p>
+					<p class="comment-footer" align="right"><%:=list[i].commentTime%></p>
+				</div>
+			</li>
+		<%}}%>
+	
+</script>
+<!-- <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
+</body>
+</html>
