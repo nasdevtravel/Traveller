@@ -168,13 +168,9 @@ Inputkit.prototype = {
 var inputkitObj;
 
 function checkNebpay() {
-    console.log("check nebpay")
-    try{
-        var NebPay = require("nebpay");
-    }catch(e){
-        //alert ("Extension wallet is not installed, please install it first.")
-        console.log("no nebpay");
-        $("#noExtension").removeClass("hide")
+    if(typeof(webExtensionWallet) === "undefined"){
+        alert ("程序依赖于Extension wallet，请先安装后再使用，谢谢！")
+        // $("#noExtension").removeClass("hide")
     }
 
     // 环境ok，拉取数据
