@@ -191,8 +191,8 @@
 				</div>
 				<div style="float: left; width: 80%;margin-left: 15%;"> 
 					<img src="images/auth.jpg" width="20px" height="20px" style="display:inlin-block;float:left;"/><p style="display:inlin-block;width:200px;float:left;">&nbsp;&nbsp;&nbsp;<%:=list[i].name.substring(0,10)%></p>
-					<img src="images/yizan.png" width="20px" height="20px" style="display:inlin-block;float:left;"/><p style="display:inlin-block;width:40px;float:left;">&nbsp;&nbsp;&nbsp;<%:=list[i].likeNum%></p> 
-					<img src="images/comm.jpg" width="20px" height="20px" style="display:inlin-block;float:left;"/><p style="display:inlin-block;width:40px;float:left;">&nbsp;&nbsp;&nbsp;<%:=list[i].commNum%></p>
+					<a href="javascript:void(0);" data-key="<%:=list[i].kitKey%>" data-topic="<%:=list[i].topic%>" class="js_click_zan"><img src="images/yizan.png" width="20px" height="20px" style="display:inlin-block;float:left;"/><p style="display:inlin-block;width:40px;float:left;">&nbsp;&nbsp;&nbsp;<%:=list[i].likeNum%></p></a> 
+					<a href="court_travel_show.html?key=<%:=list[i].kitKey%>"><img src="images/comm.jpg" width="20px" height="20px" style="display:inlin-block;float:left;"/><p style="display:inlin-block;width:40px;float:left;">&nbsp;&nbsp;&nbsp;<%:=list[i].commNum%></p></a>
 				</div>
 			</li>
 			

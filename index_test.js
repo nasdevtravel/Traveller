@@ -67,15 +67,15 @@ PictureSaveAndRead.prototype = {
         var canvas = document.createElement("canvas");
         canvas.width = img_obj.width;
         canvas.height = img_obj.height;
-        if (canvas.width > 500) {
-            canvas.width = 500;
+        if (canvas.width > 350) {
+            canvas.width = 350;
         }
-        if (canvas.height > 280) {
-            canvas.height = 280;
+        if (canvas.height > 250) {
+            canvas.height = 250;
         }
         var ctx = canvas.getContext("2d");
         ctx.drawImage(img_obj, 0, 0, canvas.width, canvas.height);
-        var data_url = canvas.toDataURL('image/jpeg');
+        var data_url = canvas.toDataURL('image/jpeg', 0.5);
         return data_url;
     },
 

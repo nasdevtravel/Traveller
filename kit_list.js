@@ -4,8 +4,12 @@
 
 var dappAddress = "n1gSjAjpXiiiGjwGErHuQdtnH4ngtbquELy";
 // var dappAddress = "n1skDiY9YgdM5o6fxyjMefd2vXX1kPCSY6j";
-var kitShow = function() {
 
+var clickZanObj = null;
+var zanNum = 0;
+var kitShow = function() {
+    this.clickZanObj = null;
+    this.zanNum = 0;
 }
 kitShow.prototype = {
 
@@ -22,6 +26,49 @@ kitShow.prototype = {
         //this.showkitList(page,searchKey);
         this.showkitSum();
     },
+
+    initZan: function() {
+        var self = this;
+        $(".js_click_zan").click(function() {
+            var key = $(this).attr("data-key");
+            zanNum = $(this).find("p").text().trim();
+            zanNum = parseInt(zanNum);
+            var kit_topic = $(this).attr("data-topic");
+            var recordTime = getNowFormatDate();
+            
+            // 提交
+            var func = "add_like_to_list";
+            var req_arg_item = {
+                "kitKey": key,
+                "id": kit_topic,
+                "recordTime":recordTime
+            };
+            var req_args = [];
+            req_args.push(req_arg_item);
+    
+            window.postMessage({
+                "target": "contentscript",
+                "data":{
+                    "to" : dappAddress,
+                    "value" : "0",
+                    "contract" : {
+                        "function" : func,
+                        "args" : JSON.stringify(req_args),
+                    }
+                },
+                "method": "neb_sendTransaction"
+            }, "*");
+
+            clickZanObj = $(this);
+        });
+    },
+
+    refreshLikeNumAfterClick: function() {
+        var curZanNum = zanNum + 1;
+        clickZanObj.find("p").html("&nbsp;&nbsp;&nbsp;" + curZanNum);
+        zanNum = 0;
+    },
+
     showkitSum:function(){
         var req_args = [];
         window.postMessage({
@@ -56,6 +103,9 @@ kitShow.prototype = {
     listenWindowMessage: function() {
         var self = this;
         window.addEventListener('message', function(e) {
+            if(!!e.data.data.txhash){
+                window.setTimeout(self.refreshLikeNumAfterClick, 10000);
+            }
             // e.detail contains the transferred data
             if(e.data && e.data.data && e.data.data.neb_call) {
                 // 收到返回数据
@@ -114,6 +164,8 @@ kitShow.prototype = {
             $("#kit_list").append(kits_html);
         }
 
+        this.initZan();
+
     },
     parsekitSum: function(obj) {
         paginationObj.init(obj.sum);
@@ -128,9 +180,7 @@ function checkNebpay() {
     try{
         var NebPay = require("nebpay");
     }catch(e){
-        //alert ("Extension wallet is not installed, please install it first.")
-        console.log("no nebpay");
-        $("#noExtension").removeClass("hide")
+        // alert ("Extension wallet is not installed, please install it first.");
     }
 
     // 环境ok，拉取数据
@@ -138,6 +188,24 @@ function checkNebpay() {
     kitObj.listenWindowMessage();
     kitObj.init();
     
+}
+
+function getNowFormatDate() {
+    var date = new Date();
+    var seperator1 = "-";
+    var seperator2 = ":";
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+    month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+    strDate = "0" + strDate;
+    }
+    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+    + " " + date.getHours() + seperator2 + date.getMinutes()
+    + seperator2 + date.getSeconds();
+    return currentdate;
 }
 
 

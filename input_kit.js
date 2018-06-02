@@ -91,7 +91,10 @@ Inputkit.prototype = {
              }
         }
         if (kit_image == "images/upimg.png") {
-            kit_image = "";
+            $("#myfile").focus();
+            self.showMessage('请上传图片');
+            // 弹框
+            return;
         }
         // 提交
         var func = "add_kit_to_list";
